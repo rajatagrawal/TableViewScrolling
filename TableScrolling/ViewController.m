@@ -69,8 +69,8 @@
         difference = offset;
     }
     NSLog(@"Difference is %lf", difference);
-    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, offset, 0)];
-    [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(0, 0, offset, 0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0,self.tableView.contentInset.bottom + offset, 0)];
+    [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(0, 0, self.tableView.scrollIndicatorInsets.bottom + offset, 0)];
     self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + difference);
 //    [self scrollToBottom];
 }

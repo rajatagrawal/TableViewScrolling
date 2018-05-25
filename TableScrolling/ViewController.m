@@ -77,7 +77,6 @@
 
 - (void)scrollDownToOffset:(CGFloat)offset {
     NSLog(@"Scroll down to offset %lf", offset);
-    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, -offset, 0)];
     CGFloat contentOffset = self.tableView.contentOffset.y;
     CGFloat difference;
     if (contentOffset < offset) {
@@ -88,7 +87,9 @@
     
     NSLog(@"content offset is %lf, difference is %lf", contentOffset, difference);
     
-//    self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y - difference);
+    self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y - difference);
+    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, self.tableView.contentInset.bottom - offset, 0)];
+    [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(0, 0, self.tableView.scrollIndicatorInsets.bottom - offset, 0)];
 }
 
 - (void)scrollToBottom {

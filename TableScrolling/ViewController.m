@@ -77,7 +77,7 @@
 - (void)scrollUpToOffset:(CGFloat)offset {
     NSLog(@"Scroll up to offset %lf", offset);
     CGFloat tableOffset = self.tableView.contentOffset.y;
-    CGFloat visibleHeight = self.tableView.frame.size.height - offset;
+    CGFloat visibleHeight = self.tableView.frame.size.height - offset - self.tableView.contentInset.bottom;
     CGFloat contentSize = self.tableView.contentSize.height;
     
     CGFloat difference = contentSize - (tableOffset + visibleHeight);

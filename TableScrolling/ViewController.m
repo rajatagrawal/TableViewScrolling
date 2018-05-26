@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UITableView+Scrolling.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -43,7 +44,7 @@
     
     [self.view layoutIfNeeded];
     NSLog(@"stack view height is %lf", self.bottomStackView.frame.size.height);
-    [self scrollUpToOffset:self.bottomStackView.frame.size.height];
+    [self.tableView scrollUpToOffset:self.bottomStackView.frame.size.height];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

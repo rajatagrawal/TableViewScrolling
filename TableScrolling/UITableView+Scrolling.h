@@ -10,7 +10,7 @@
 
 @interface UITableView (Scrolling)
 
-- (void)scrollUpToOffset:(CGFloat)offset;
-- (void)scrollDownToOffset:(CGFloat)offset;
+- (void)scrollUpByHeight:(CGFloat)height;
+- (void)scrollDownByHeight:(CGFloat)height;
 
 @end

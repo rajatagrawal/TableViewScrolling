@@ -126,6 +126,9 @@
 - (void)setupTableView {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    self.tableView.insetsContentViewsToSafeArea = NO;
+    self.tableView.insetsLayoutMarginsFromSafeArea = NO;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"normal_cell"];
     
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 30)];

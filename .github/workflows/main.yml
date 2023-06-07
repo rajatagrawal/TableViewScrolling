@@ -1,6 +1,7 @@
-name: learn-github-actions
+name: learn-github-actions-from-main-yml
 run-name: ${{ github.actor }} is learning GitHub Actions
 on:
+  workflow_dispatch:
   pull_request:
     types: [opened, labeled, unlabeled, assigned, edited, reopened]
 jobs:

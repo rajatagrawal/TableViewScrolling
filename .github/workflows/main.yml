@@ -22,7 +22,7 @@ jobs:
       with:
         filters: |
           backend:
-            - './TableScrolling/AppDelegate.m'
+            - './TableScrolling/AppDelegate.'
           frontend:
             - 'frontend/**'
   check-bats-version:

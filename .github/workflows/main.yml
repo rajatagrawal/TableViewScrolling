@@ -5,8 +5,14 @@ on:
   pull_request:
     types: [opened, labeled, unlabeled, assigned, edited, reopened]
 jobs:
+  checkout-code:
+    runs-on: ubuntu-latest
+    steps:
+      # For pull requests it's not necessary to checkout the code
+      - uses: actions/checkout@v3
   changeset:
     runs-on: ubuntu-latest
+    needs: [checkout-code]
     # Required permissions
     permissions:
       pull-requests: read
@@ -16,7 +22,6 @@ jobs:
       frontend: ${{ steps.filter.outputs.frontend }}
     steps:
     # For pull requests it's not necessary to checkout the code
-    - uses: actions/checkout@v3
     - uses: dorny/paths-filter@v2
       id: filter
       with:

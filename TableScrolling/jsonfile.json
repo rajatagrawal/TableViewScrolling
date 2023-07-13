@@ -1,6 +1,5 @@
 {
-    "clientSchemaVersion": 1,
-    "serverSchemaVersion": 6,
+    "clientSchemaVersion": 3,
     "exportedApplication": {
       "name": "Untitled application 39",
       "isPublic": false,
@@ -195,6 +194,7 @@
                     "overflow": "NONE",
                     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                     "parentColumnSpace": 20.078125,
+                    "dynamicTriggerPathList": [],
                     "leftColumn": 23,
                     "dynamicBindingPathList": [
                       {
@@ -205,14 +205,11 @@
                       },
                       {
                         "key": "borderRadius"
-                      },
-                      {
-                        "key": "text"
                       }
                     ],
                     "shouldTruncate": false,
                     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                    "text": "Hello {{appsmith.user.name || appsmith.user.email}}",
+                    "text": "Hello rajat agrawal",
                     "key": "swpmnbqqbh",
                     "isDeprecated": false,
                     "rightColumn": 39,
@@ -311,6 +308,6 @@
       "name": "Default",
       "displayName": "Modern",
       "isSystemTheme": true,
-      "deleted": "random"
+      "deleted": "randoma"
     }
   }
